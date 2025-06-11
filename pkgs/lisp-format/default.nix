@@ -38,7 +38,7 @@ let
 
     postInstall = ''
       substituteInPlace $out/bin/lisp-format \
-        --replace-fail "exec emacs" "${pkgs.emacs}/bin/emacs"
+        --replace-fail "emacs" "${pkgs.emacs}/bin/emacs"
     '';
 
     installCheckPhase = ''
