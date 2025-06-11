@@ -36,9 +36,13 @@ jobs:
           - cameronyule
         nixPath:
           - nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixpkgs-unstable.tar.gz
-          - nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz
-          - nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-24.05.tar.gz
-    runs-on: ubuntu-latest
+          #- nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz
+          #- nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-24.05.tar.gz
+        os:
+          - "ubuntu-24.04"
+          - "ubuntu-24.04-arm"
+          - "macos-15"
+    runs-on: ${{ matrix.os }}
     environment: CI
     steps:
     - name: Checkout repository
