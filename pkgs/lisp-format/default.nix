@@ -52,7 +52,6 @@ let
       homepage = "https://github.com/eschulte/lisp-format";
       license = licenses.mit;
       platforms = platforms.unix;
-      maintainers = [ maintainers.cameronyule ];
     };
   };
 
